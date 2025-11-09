@@ -97,12 +97,12 @@ export default function Projects() {
 
         <div className="text-center mt-12">
           <a
-            href="https://behance.net"
+            href="https://instagram.com/_areeb_designs_"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-accent hover:gap-3 transition-all"
           >
-            View full portfolio on Behance
+            View more samples on Instagram
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"

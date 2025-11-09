@@ -8,7 +8,7 @@ export default function About() {
 
         <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
           <p>
-            Hey, I'm Areeb. I've spent the last 5+ years obsessed with visual design—specifically, what makes people
+            Hey, I'm Areeb. I've spent the last 2+ years obsessed with visual design—specifically, what makes people
             click, watch, and engage.
           </p>
 
@@ -32,9 +32,9 @@ export default function About() {
 
         <div className="mt-12 grid grid-cols-3 gap-4 sm:gap-8">
           {[
-            { number: "200+", label: "Projects Completed" },
-            { number: "50+", label: "Active Clients" },
-            { number: "5+", label: "Years Experience" },
+            { number: "50+", label: "Projects Completed" },
+            { number: "3+", label: "Active Clients" },
+            { number: "2+", label: "Years Experience" },
           ].map((stat, idx) => (
             <div key={idx} className="text-center">
               <p className="text-3xl sm:text-4xl font-bold text-accent mb-2">{stat.number}</p>

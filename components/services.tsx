@@ -8,42 +8,44 @@ export default function Services() {
   const services = [
     {
       id: 0,
-      title: "Single Thumbnail",
-      price: "$50",
-      description: "Perfect for testing or one-off projects",
+      title: "Basic Package",
+      price: "250Rs",
+      discountedPrice: "150Rs",
+      description: "Perfect for creators who need quick, eye-catching thumbnails",
       features: [
-        "High-impact custom design",
-        " 2 revision rounds",
-        "Fast 48-hour turnaround",
-        "High-res PNG & source file",
+        "1 custom thumbnail",
+        "1280x720 resolution",
+        "2 revision rounds",
+        "bold text & clear composition",
+        "delivery within 24 hours",
       ],
     },
     {
       id: 1,
-      title: "Channel Pack",
-      price: "$400",
-      description: "Complete visual identity for your channel",
+      title: "Premium Package",
+      price: "800Rs",
+      discountedPrice: "500Rs",
+      description: "For professionals seeking for standout, clickable designs every time",
       features: [
-        "10 custom thumbnails",
-        "Channel banner & profile picture",
-        "Intro/outro graphics",
-        "Unlimited revisions",
-        "5-day turnaround",
-        "Quarterly updates",
+        "2 Custom Thumbnail design",
+        "Unique concepts & detailed graphics",
+        "Source files included {PSD, PNG}",
+        "Priority Delivery under 48 hours",
+        "Unlimited revision rounds",
       ],
       popular: true,
     },
     {
       id: 2,
-      title: "Poster Design",
-      price: "$150",
-      description: "Eye-catching print or digital posters",
+      title: "Standard Package",
+      price: "500Rs",
+      discountedPrice: "300Rs",
+      description: "Ideal for YouTubers looking to enhance their channel's visual appeal",
       features: [
-        "Custom poster design",
-        "Multiple size formats",
-        "3 revision rounds",
-        "Print-ready files",
-        "72-hour turnaround",
+        "1 custom thumbnails",
+        "CTR optimized visuals {emotion, clarity, contrast}",
+        "Delivered in 48 hours",
+        "5 revision rounds",
       ],
     },
   ]
@@ -78,7 +80,10 @@ export default function Services() {
               )}
 
               <h3 className="text-2xl font-bold mb-2 text-foreground">{service.title}</h3>
-              <p className="text-4xl font-bold text-accent mb-1">{service.price}</p>
+              <div>
+                <p className="text-lg text-foreground/60 line-through">{service.price}</p>
+              <p className="text-4xl font-bold text-accent mb-1">{service.discountedPrice}</p>
+              </div>
               <p className="text-foreground/60 text-sm mb-6">{service.description}</p>
 
               <div className="space-y-3 mb-8">
@@ -99,7 +104,7 @@ export default function Services() {
 
               <a
                 href="#contact"
-                className={`w-full py-2 rounded-lg font-semibold transition-all duration-300 text-center ${
+                className={`w-full px-4 py-2 rounded-lg font-semibold transition-all duration-300 text-center ${
                   service.popular
                     ? "bg-accent text-accent-foreground hover:opacity-90"
                     : "border border-foreground/20 text-foreground hover:bg-foreground/5"

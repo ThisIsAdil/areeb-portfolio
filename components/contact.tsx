@@ -9,23 +9,12 @@ export default function Contact() {
           Ready to bring your vision to life? Reach out and let's collaborate.
         </p>
 
-        <div className="bg-card border border-border rounded-lg p-8 mb-12">
-          <p className="text-foreground/60 mb-3">Get in touch:</p>
-          <a
-            href="mailto:areeb@example.com"
-            className="inline-block text-2xl font-semibold text-accent hover:underline transition-colors"
-          >
-            areeb@example.com
-          </a>
-        </div>
-
         <div className="pt-8 border-t border-border space-y-4">
-          <p className="text-foreground/60">Or connect on social</p>
+          <p className="text-foreground/60">Connect on social</p>
           <div className="flex justify-center gap-6">
             {[
-              { name: "Behance", icon: "🎨", url: "#" },
-              { name: "Instagram", icon: "📸", url: "#" },
-              { name: "X", icon: "𝕏", url: "#" },
+              { name: "Discord", url: "https://discordapp.com/users/1354859500250726520" },
+              { name: "Instagram", url: "https://www.instagram.com/_areeb_designs_" },
             ].map((social) => (
               <a
                 key={social.name}
@@ -33,7 +22,7 @@ export default function Contact() {
                 className="text-foreground/60 hover:text-accent transition-colors text-2xl"
                 title={social.name}
               >
-                {social.icon}
+                {social.name}
               </a>
             ))}
           </div>
