@@ -6,50 +6,64 @@ import { useState } from "react"
 const projectsData = [
   {
     id: 1,
-    title: "Tech Creator Series",
-    category: "YouTube Thumbnails",
-    image: "/vibrant-tech-thumbnail.jpg",
-    description: "High-engagement thumbnails for a tech review channel",
+    title: "The Hit Show",
+    image: "/portfolio-1.jpg",
+    description: "Minecraft gaming show thumbnails",
   },
   {
     id: 2,
-    title: "Gaming Channel Branding",
-    category: "Channel Pack",
-    image: "/gaming-channel-branding.jpg",
-    description: "Complete visual identity for gaming content creator",
+    title: "Secret",
+    image: "/portfolio-2.jpg",
+    description: "Mystery-themed YouTube thumbnails",
   },
   {
     id: 3,
-    title: "Music Producer Posters",
-    category: "Posters & Graphics",
-    image: "/music-producer-poster.jpg",
-    description: "Event promotion posters for music production brand",
+    title: "Whole Server",
+    image: "/portfolio-3.jpg",
+    description: "SMP series thumbnail designs",
   },
   {
     id: 4,
-    title: "Business Startup Pack",
-    category: "Social Media Graphics",
-    image: "/business-startup-graphics.jpg",
-    description: "Cohesive social media content calendar design",
+    title: "PvP Legends",
+    image: "/portfolio-4.jpg",
+    description: "Competitive gaming thumbnails",
   },
   {
     id: 5,
-    title: "Education Channel Series",
-    category: "YouTube Thumbnails",
-    image: "/education-channel-thumbnail.jpg",
-    description: "Engaging educational content thumbnails",
+    title: "Me vs Ender Dragon",
+    image: "/portfolio-5.jpg",
+    description: "Epic Minecraft boss battle thumbnails",
   },
   {
     id: 6,
-    title: "Lifestyle Influencer Pack",
-    category: "Channel Pack",
-    image: "/lifestyle-influencer-pack.jpg",
-    description: "Complete branding for lifestyle content creator",
+    title: "1 vs Many Fight",
+    image: "/portfolio-6.jpg",
+    description: "Dynamic poster design for gaming event",
   },
+  {
+    id: 7,
+    title: "Grow Your Channel",
+    image: "/portfolio-7.jpg",
+    description: "YouTube channel growth tips thumbnails",
+  },
+  {
+    id: 9,
+    title: "Restaurant Vlog Thumbnails",
+    category: "YouTube Thumbnails",
+    image: "/portfolio-9.jpg",
+    description: "Eye-catching thumbnails for restaurant vlogging channel",
+  },
+  {
+    id: 10,
+    title: "Food Blogger Branding",
+    category: "Channel Pack",
+    image: "/portfolio-10.jpeg",
+    description: "Complete visual identity for food blogging channel",
+  }
 ]
 
 export default function Projects() {
-  const [hoveredId, setHoveredId] = useState<number | null>(null)
+
 
   return (
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -67,8 +81,6 @@ export default function Projects() {
               key={project.id}
               href="#"
               className="group relative overflow-hidden rounded-lg bg-card border border-border transition-all duration-300 hover:border-accent/50"
-              onMouseEnter={() => setHoveredId(project.id)}
-              onMouseLeave={() => setHoveredId(null)}
             >
               <div className="relative h-64 overflow-hidden">
                 <Image
@@ -81,16 +93,9 @@ export default function Projects() {
               </div>
 
               <div className="p-5">
-                <p className="text-sm text-accent font-semibold mb-2">{project.category}</p>
-                <h3 className="text-lg font-semibold mb-2 text-foreground">{project.title}</h3>
+                <h3 className="text-sm text-accent font-semibold mb-2">{project.title}</h3>
                 <p className="text-sm text-foreground/60">{project.description}</p>
               </div>
-
-              {hoveredId === project.id && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black/40 rounded-lg animate-in fade-in duration-200">
-                  <span className="text-white font-semibold">View Case Study</span>
-                </div>
-              )}
             </a>
           ))}
         </div>
